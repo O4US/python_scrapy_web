@@ -1,0 +1,13 @@
+{%extends "index.html" %}
+{% block mainhead %}
+<li><a href="{% url 'index' %}">首页</a></li>
+<li><a href="{% url 'movies' %}">电影</a></li>
+<li><a href="{% url 'weathers' %}">天气</a></li>
+<li><a href="{% url 'phones' %}">手机</a></li>
+{% endblock %}
+{% block mainbody %}
+<h2>无法访问</h2>
+<p>
+    <a class="btn btn-lg btn-primary" href="{% url 'index' %}" role="button">前往首页 »</a>
+</p>
+{% endblock %}

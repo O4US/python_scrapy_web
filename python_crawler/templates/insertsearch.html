@@ -1,0 +1,17 @@
+{%extends "index.html" %}
+{% block mainhead %}
+<li><a href="{% url 'index' %}">首页</a></li>
+<li><a href="{% url 'movies' %}">电影</a></li>
+<li><a href="{% url 'weathers' %}">天气</a></li>
+<li><a href="{% url 'phones' %}">手机</a></li>
+{% endblock %}
+{% block mainbody %}
+<h3>在京东上获取指定的手机</h3>
+<form class="navbar-form navbar-left" action="/phone_search" method="post">
+    {% csrf_token %}
+    <div class="form-group">
+        <input type="text" placeholder="输入手机名称" class="form-control" name="phonename">
+    </div>
+    <button type="submit" class="btn btn-success" onclick="pleasewait(this);">提 交</button>
+</form>
+{% endblock %}

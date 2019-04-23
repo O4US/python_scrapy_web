@@ -1,0 +1,109 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<!-- saved from url=(0049)https://v3.bootcss.com/examples/navbar-fixed-top/ -->
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{% static './icon/remove.ico'%}">
+
+    <title>welcome to python crawler web</title>
+
+    <!-- <link href="{% static './Bootstrap_files/mycss.css'%}" rel="stylesheet"> -->
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static './Bootstrap_files/bootstrap.min.css'%}" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="{% static './Bootstrap_files/ie10-viewport-bug-workaround.css'%}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static './Bootstrap_files/navbar-fixed-top.css'%}" rel="stylesheet">
+    
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="{% static './Bootstrap_files/ie-emulation-modes-warning.js'%}"></script>    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="{% url 'index' %}">欢迎来到爬虫网</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav" id="navbarul">
+            {% block mainhead %}
+            <li class="active"><a href="{% url 'index' %}">首页</a></li>
+            <li><a href="{% url 'movies' %}">电影</a></li>
+            <li><a href="{% url 'weathers' %}">天气</a></li>
+            <li><a href="{% url 'phones' %}">手机</a></li>
+            {% endblock %}   
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+          	<li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">控制台<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="{% url 'deleteall' %}">删除所有</a></li>
+                <li><a href="{% url 'insertdata' %}" onclick="pleasewait(this);">获取数据</a></li>
+                <li><a href="{% url 'updatabase' %}" onclick="pleasewait(this);">更新数据</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="{% url 'insertsearch' %}" >定向爬取</a></li>
+              </ul>
+           </li>          
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+      	{% block mainbody %}
+         <h2>{{zhuangtai}}</h2>
+        <p>网络爬虫（又被称为网页蜘蛛，网络机器人，在FOAF社区中间，更经常的称为网页追逐者），是一种按照一定的规则，自动地抓取万维网信息的程序或者脚本。另外一些不常使用的名字还有蚂蚁、自动索引、模拟程序或者蠕虫。</p>
+        <p>
+          <a class="btn btn-lg btn-primary" target="_blank" href='https://baike.baidu.com/item/%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/5162711?fromtitle=%E7%88%AC%E8%99%AB&fromid=22046949&fr=aladdin' role="button">了解爬虫 »</a>
+        </p>
+        {% endblock %} 
+      </div>
+    </div> <!-- /container -->
+
+    <footer>
+    <div>
+    
+    </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{% static './Bootstrap_files/jquery.min.js'%}"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="{% static './Bootstrap_files/bootstrap.min.js'%}"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="{% static './Bootstrap_files/ie10-viewport-bug-workaround.js'%}"></script>  
+    <!-- <script src="{% static './Bootstrap_files/myjs.js'%}"></script> -->
+    <script>
+    function pleasewait(){
+    alert("正在获取数据,请耐心等候3-5分钟");
+    }
+    </script> 
+</body>
+</html>

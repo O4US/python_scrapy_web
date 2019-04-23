@@ -1,0 +1,49 @@
+{%extends "index.html" %}
+{% block mainhead %}
+<li><a href="{% url 'index' %}">首页</a></li>
+<li class="active"><a href="{% url 'movies' %}">电影</a></li>
+<li><a href="{% url 'weathers' %}">天气</a></li>
+<li><a href="{% url 'phones' %}">手机</a></li>
+{% endblock %}
+{% block mainbody %}
+<form class="navbar-form navbar-right" action="/moviesearch" method="post">
+  {% csrf_token %}
+  <div class="form-group">
+        {% if history %}
+        <input type="text" placeholder="{{history}}" class="form-control" name="val">
+        {% else %}
+        <input type="text" placeholder="输入搜索内容" class="form-control" name="val">
+        {% endif %}
+  </div>
+  <button type="submit" class="btn btn-success">提 交</button>
+</form>
+<table class="table table-hover">
+    <caption><h2>豆瓣前250部电影</h2></caption>
+    <thead>
+      <tr>
+        <th>名称</th>
+        <th>简介</th>
+        <th>获取时间</th>
+        <th>操作</th>
+      </tr>
+    </thead>
+    <tbody>
+            {% for movie in movies %}
+            <tr>
+                <td>
+                    <a href="{{movie.url}}">{{movie.name}}</a>
+                </td>
+                <td>
+                    {{movie.synopsis}}
+                </td>
+                <td>
+                    {{movie.time}}
+                </td>
+                <td>
+                    <a class="btn btn-sm btn-info" href="{{movie.url}}" role="button">查看</a>
+                </td>
+            </tr> 
+            {% endfor %}  
+    </tbody>
+  </table>
+{% endblock %}
