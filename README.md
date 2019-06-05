@@ -63,8 +63,8 @@ PS C:\Users\用户> ```cd D:\developitems\django\python_crawler```<br>
 ### 5.调试运行
 ```python manage.py runserver 本机ip+端口号 --insecure```<br>
 例如:```python manage.py runserver 127.0.0.1:88 --insecure```<br>
-出现
-```Django version 2.1.7, using settings 'python_crawler.settings'
-Starting development server at http://。。。。:88/
-Quit the server with CTRL-BREAK.```
+出现<br>
+Django version 2.1.7, using settings 'python_crawler.settings'<br>
+Starting development server at http://。。。。:88/<br>
+Quit the server with CTRL-BREAK.<br>
 后可以通过本机ip+端口号再局域网内访问项目
