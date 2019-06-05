@@ -22,7 +22,8 @@ MySQL5.7 win64<br>
 django\python_crawler\python_crawler\Chromedriver.exe版本需要与本机Chrome浏览器版本一致<br>
 当前Chromedriver.exe版本为73.0.3683<br>
 
-### 1.Chromedriver下载地址http://npm.taobao.org/mirrors/chromedriver
+### 1.Chromedriver
+下载地址http://npm.taobao.org/mirrors/chromedriver<br>
 
 ### 2.MySQL编码配置
 默认位置C:\ProgramData\MySQL\MySQL Server 5.7\my.ini<br>
@@ -32,7 +33,7 @@ django\python_crawler\python_crawler\Chromedriver.exe版本需要与本机Chrome
 ```default-character-set = utf8```<br>
 * 在[mysqld]后添加<br>
 ```character-set-server=utf8```<br>
-保存并重启MySQL服务
+保存并重启MySQL服务<br>
 
 ### 3.请修改setting.py
 位于django\python_crawler\python_crawler\settings.py<br>
@@ -54,9 +55,11 @@ DATABASES = {
 
 ### 4.使用cmd,cd到项目路径下
 PS C:\Users\用户> ```cd D:\developitems\django\python_crawler```<br>
-或者先执行 ```d:``` 切换磁盘再执行```cd D:\developitems\django\python_crawler```<br>
-然后执行```python manage.py makemigrations crawler```
-```python manage.py migrate crawler```
+或者先执行 ```d:```<br>
+切换磁盘再执行```cd D:\developitems\django\python_crawler```<br>
+然后执行<br>
+```python manage.py makemigrations crawler```<br>
+```python manage.py migrate crawler```<br>
 ```python manage.py migrate```<br>
 后MySQL的表结构就创建完成了<br>
 
@@ -67,4 +70,4 @@ PS C:\Users\用户> ```cd D:\developitems\django\python_crawler```<br>
 Django version 2.1.7, using settings 'python_crawler.settings'<br>
 Starting development server at http://。。。。:88/<br>
 Quit the server with CTRL-BREAK.<br>
-后可以通过本机ip+端口号再局域网内访问项目
+后可以通过本机ip+端口号再局域网内访问项目<br>
