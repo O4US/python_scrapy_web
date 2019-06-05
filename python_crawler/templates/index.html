@@ -10,10 +10,10 @@
     <meta name="author" content="">
     <link rel="icon" href="{% static './icon/remove.ico'%}">
 
-    <title>welcome to python crawler web</title>
+    <title>welcome to python scrapy web</title>
 
-    <!-- <link href="{% static './Bootstrap_files/mycss.css'%}" rel="stylesheet"> -->
-
+    <link href="{% static './Bootstrap_files/mycss.css'%}" rel="stylesheet">
+    <script src="{% static './Bootstrap_files/myjs.js'%}"></script>
     <!-- Bootstrap core CSS -->
     <link href="{% static './Bootstrap_files/bootstrap.min.css'%}" rel="stylesheet">
 
@@ -59,13 +59,16 @@
           	<li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">控制台<span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="{% url 'deleteall' %}">删除所有</a></li>
+                <li><a href="{% url 'deleteall' %}" onclick="pleasewait(this);">删除所有</a></li>
                 <li><a href="{% url 'insertdata' %}" onclick="pleasewait(this);">获取数据</a></li>
                 <li><a href="{% url 'updatabase' %}" onclick="pleasewait(this);">更新数据</a></li>
                 <li role="separator" class="divider"></li>
                 <li><a href="{% url 'insertsearch' %}" >定向爬取</a></li>
               </ul>
-           </li>          
+           </li>
+           <li><a href="{% url 'login' %}">登录</a></li>
+           <li><a href="{% url 'regist' %}">注册</a></li>
+           <li><a href="{% url 'control' %}">control</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -99,11 +102,5 @@
     <script src="{% static './Bootstrap_files/bootstrap.min.js'%}"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="{% static './Bootstrap_files/ie10-viewport-bug-workaround.js'%}"></script>  
-    <!-- <script src="{% static './Bootstrap_files/myjs.js'%}"></script> -->
-    <script>
-    function pleasewait(){
-    alert("正在获取数据,请耐心等候3-5分钟");
-    }
-    </script> 
 </body>
 </html>

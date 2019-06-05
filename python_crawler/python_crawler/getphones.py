@@ -4,7 +4,7 @@ import time
 from selenium import webdriver
 import os
 from lxml import etree
-import MySQLdb
+#import MySQLdb
 from crawler.models import Phones
 
 def get_phones(str):

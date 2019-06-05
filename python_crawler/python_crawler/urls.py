@@ -15,8 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import *
 from . import view,control
+from django.contrib import admin
  
 urlpatterns = [
+    url(r'^admin/', admin.site.urls),
+
     url(r'^$', view.index),
     url(r'^index$', view.index,name='index'),
     url(r'^movies$', view.movies,name='movies'),
@@ -26,6 +29,9 @@ urlpatterns = [
     url(r'^phonesearch$', view.phonesearch,name='phonesearch'),
     url(r'^moviesearch$', view.moviesearch,name='moviesearch'),
     url(r'^weathersearch$', view.weathersearch,name='weathersearch'),
+    url(r'^login$', view.login,name='login'),
+    url(r'^regist$', view.regist,name='regist'),
+    url(r'^control$', view.control,name='control'),
 
     url(r'^deleteall$', control.deletelall,name='deleteall'),
     url(r'^insertdata$', control.insertdata,name='insertdata'),

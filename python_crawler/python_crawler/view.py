@@ -45,3 +45,12 @@ def weathersearch(request):
     weathers=Weathers.objects.filter(Q(city__icontains=context['val'])|Q(dates__icontains=context['val'])|Q(winL__icontains=context['val'])\
     |Q(temperatureLow__icontains=context['val'])|Q(temperatureHigh__icontains=context['val'])|Q(weather__icontains=context['val']))
     return render(request, 'weathers.html', {'weathers': weathers,'history':context['val']})
+
+def login(request):
+    return render(request, 'login.html')
+
+def regist(request):
+    return render(request, 'regist.html')
+
+def control(request):
+    return render(request, 'control.html')

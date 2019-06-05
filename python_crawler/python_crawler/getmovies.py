@@ -1,6 +1,6 @@
 ﻿import requests
 from bs4 import BeautifulSoup
-import MySQLdb
+#import MySQLdb
 import time
 from crawler.models import Movies
 def get_movies():

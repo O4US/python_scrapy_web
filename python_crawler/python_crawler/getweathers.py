@@ -1,7 +1,7 @@
 ﻿from urllib.request import urlopen
 from bs4 import BeautifulSoup
 import re
-import MySQLdb
+#import MySQLdb
 from crawler.models import Weathers
 def get_weather():
     # conn=MySQLdb.connect(host="localhost",user="sa",passwd="1234",db="python_crawler",charset="utf8")
