@@ -26,12 +26,12 @@ django\python_crawler\python_crawler\Chromedriver.exe版本需要与本机Chrome
 
 ### 2.MySQL编码配置
 默认位置C:\ProgramData\MySQL\MySQL Server 5.7\my.ini<br>
-* 在[client]后添加
-default-character-set = utf8<br>
-* 在[mysql]后添加
-default-character-set = utf8<br>
-* 在[mysqld]后添加
-character-set-server=utf8<br>
+* 在[client]后添加<br>
+```default-character-set = utf8```<br>
+* 在[mysql]后添加<br>
+```default-character-set = utf8```<br>
+* 在[mysqld]后添加<br>
+```character-set-server=utf8```<br>
 保存并重启MySQL服务
 
 ### 3.请修改setting.py
