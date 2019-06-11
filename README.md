@@ -1,6 +1,8 @@
 django+bootstrap一个Python爬虫网页
 ====
-页面效果预览 www.personweb.net或http://118.25.129.61:8888/index
+页面效果预览 www.personweb.net<br>
+或<br>
+http://118.25.129.61:8888/index
 
 已完成:
 * 爬取豆瓣前250部电影
