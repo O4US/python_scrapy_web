@@ -3,7 +3,6 @@
 ![](https://img.shields.io/badge/-django-red.svg)
 ![](https://img.shields.io/badge/-bootstrap-orange.svg)
 
-<br>
 A Python Scrapy Web
 ====
 页面效果预览 www.personweb.net<br>
