@@ -1,4 +1,10 @@
-base:django+bootstrap a python_scrapy_web
+![](https://img.shields.io/badge/-version0.2-green.svg)
+![](https://img.shields.io/badge/-%E5%BE%85%E6%9B%B4%E6%96%B0-blue.svg)
+![](https://img.shields.io/badge/-django-red.svg)
+![](https://img.shields.io/badge/-bootstrap-orange.svg)
+
+<br>
+A Python Scrapy Web
 ====
 页面效果预览 www.personweb.net<br>
 或<br>
@@ -74,7 +80,6 @@ PS C:\Users\用户> ```cd D:\developitems\django\python_crawler```<br>
 ```python manage.py runserver 本机ip+端口号 --insecure```<br>
 <br>
 例如:```python manage.py runserver 127.0.0.1:88 --insecure```<br>
-<br>
 出现以下内容:<br>
 Django version 2.1.7, using settings 'python_crawler.settings'<br>
 Starting development server at http://127.0.0.1:88/<br>
