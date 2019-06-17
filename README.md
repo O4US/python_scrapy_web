@@ -1,4 +1,4 @@
-django+bootstrap一个Python爬虫网页
+base:django+bootstrap a python_scrapy_web
 ====
 页面效果预览 www.personweb.net<br>
 或<br>
@@ -24,8 +24,9 @@ http://118.25.129.61:8888/index
 
 基于Python3.6.6 win64,安装库:request,django2.1.7,bs4,selenium,lxml,urllib<br>
 MySQL5.7 win64<br>
-django\python_crawler\python_crawler\Chromedriver.exe版本需要与本机Chrome浏览器版本一致<br>
+* django\python_crawler\python_crawler\Chromedriver.exe版本需要与本机Chrome浏览器版本一致<br>
 当前Chromedriver.exe版本为73.0.3683<br>
+* .\python_crawler\python_crawler下getphones.py和sign12306.py引用了chromedriver.exe<br>
 
 ### 1.Chromedriver
 下载地址http://npm.taobao.org/mirrors/chromedriver<br>
