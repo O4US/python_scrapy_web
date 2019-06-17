@@ -72,10 +72,11 @@ PS C:\Users\用户> ```cd D:\developitems\django\python_crawler```<br>
 ### 5.调试运行
 项目路径下输入:<br>
 ```python manage.py runserver 本机ip+端口号 --insecure```<br>
+<br>
 例如:```python manage.py runserver 127.0.0.1:88 --insecure```<br>
 <br>
 出现以下内容:<br>
 Django version 2.1.7, using settings 'python_crawler.settings'<br>
 Starting development server at http://127.0.0.1:88/<br>
 Quit the server with CTRL-BREAK.<br>
-后可以通过http://127.0.0.1:88/访问项目<br>
+后可以通过http://127.0.0.1:88/ 访问项目<br>
