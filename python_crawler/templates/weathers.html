@@ -1,10 +1,4 @@
 {%extends "index.html" %}
-{% block mainhead %}
-<li><a href="{% url 'index' %}">首页</a></li>
-<li><a href="{% url 'movies' %}">电影</a></li>
-<li class="active"><a href="{% url 'weathers' %}">天气</a></li>
-<li><a href="{% url 'phones' %}">手机</a></li>
-{% endblock %}
 {% block mainbody %}
 <form class="navbar-form navbar-right" action="/weathersearch" method="post">
     {% csrf_token %}

@@ -1,3 +1,3 @@
 function pleasewait(){
-    alert("正在获取数据,请耐心等候3-5分钟");
+    alert("正在执行操作,请耐心等候3-5分钟");
     }

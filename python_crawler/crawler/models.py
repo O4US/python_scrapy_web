@@ -33,6 +33,17 @@ class Phones(models.Model):
         verbose_name = '手机'
         verbose_name_plural = '手机'
 
+class Baike(models.Model):
+    num = models.CharField(max_length=200)
+    depth = models.CharField(max_length=200)
+    fhurl =models.CharField(max_length=10000)
+    churl =models.CharField(max_length=10000)
+    time = models.CharField(max_length=200)
+
+    class Meta:
+        verbose_name = '百科'
+        verbose_name_plural = '百科'     
+
 class User(models.Model):
     gender = (
         ('male','男'),

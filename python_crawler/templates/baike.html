@@ -1,0 +1,26 @@
+{%extends "index.html" %}
+{% block mainbody %}
+<table class="table table-striped" width="100%"  style="table-layout:fixed;">
+    <caption><h2>{{costime}}</h2></caption>
+    <thead>
+      <tr>
+        <th>序号</th>
+        <th>深度</th>
+        <th width="35%">前链接</th>
+        <th width="35%">后链接</th>
+        <th>获取时间</th>
+      </tr>
+    </thead>
+    <tbody>
+            {% for var in baike %}
+            <tr>
+                <td>{{var.num}}</td>
+                <td>{{var.depth}}</td>
+                <td style="overflow: hidden;text-overflow:ellipsis;white-space: nowrap;"><a href="{{var.fhurl}}">{{var.fhurl}}</a></td>
+                <td style="overflow: hidden;text-overflow:ellipsis;white-space: nowrap;"><a href="{{var.churl}}">{{var.churl}}</a></td>
+                <td>{{var.time}}</td>
+            </tr> 
+            {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

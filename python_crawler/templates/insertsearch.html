@@ -10,8 +10,17 @@
 <form class="navbar-form navbar-left" action="/phone_search" method="post">
     {% csrf_token %}
     <div class="form-group">
-        <input type="text" placeholder="输入手机名称" class="form-control" name="phonename">
+        <input type="text" placeholder="输入手机名称" required="required" class="form-control" name="phonename">
     </div>
     <button type="submit" class="btn btn-success" onclick="pleasewait(this);">提 交</button>
-</form>
+</form><br><br><br>
+<h3>百度百科深度爬虫</h3>
+<form class="navbar-form navbar-left" action="/baike_search" method="post">
+    {% csrf_token %}
+    <div class="form-group">
+        <input type="text" placeholder="输入搜索内容" required="required" class="form-control" name="value"><br>
+        <input type="text" placeholder="输入获取深度" required="required" class="form-control" name="depth">
+    </div>
+    <button type="submit" class="btn btn-success" onclick="pleasewait(this);">提 交</button>
+</form><br><br><br>
 {% endblock %}

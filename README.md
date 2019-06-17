@@ -7,11 +7,14 @@ http://118.25.129.61:8888/index
 已完成:
 * 爬取豆瓣前250部电影
 * 部分地区天气
-* 京东手机
+* 京东获取指定手机
+* 12306登录
+* 百度百科深度爬虫
+* 用户登录注册
 
 未完成:
 * 优化爬虫速度
-* 用户登录注册
+* 注册信息校验
 * 管理员登录与控制页面
 * 页面内容分页显示
 * 页面加载进度条动画效果
@@ -66,10 +69,12 @@ PS C:\Users\用户> ```cd D:\developitems\django\python_crawler```<br>
 后MySQL的表结构就创建完成了<br>
 
 ### 5.调试运行
+项目路径下输入:<br>
 ```python manage.py runserver 本机ip+端口号 --insecure```<br>
 例如:```python manage.py runserver 127.0.0.1:88 --insecure```<br>
-出现<br>
+<br>
+出现以下内容:<br>
 Django version 2.1.7, using settings 'python_crawler.settings'<br>
-Starting development server at http://。。。。:88/<br>
+Starting development server at http://127.0.0.1:88/<br>
 Quit the server with CTRL-BREAK.<br>
-后可以通过本机ip+端口号再局域网内访问项目<br>
+后可以通过http://127.0.0.1:88/访问项目<br>

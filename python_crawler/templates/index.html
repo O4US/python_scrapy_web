@@ -48,14 +48,14 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav" id="navbarul">
-            {% block mainhead %}
-            <li class="active"><a href="{% url 'index' %}">首页</a></li>
-            <li><a href="{% url 'movies' %}">电影</a></li>
-            <li><a href="{% url 'weathers' %}">天气</a></li>
-            <li><a href="{% url 'phones' %}">手机</a></li>
-            {% endblock %}   
+            <li class="{{myclass1}}"><a href="{% url 'index' %}">首页</a></li>
+            <li class="{{myclass2}}"><a href="{% url 'movies' %}">电影</a></li>
+            <li class="{{myclass3}}"><a href="{% url 'weathers' %}">天气</a></li>
+            <li class="{{myclass4}}"><a href="{% url 'phones' %}">手机</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
+          {% csrf_token %}
+          {% if username %}
           	<li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">控制台<span class="caret"></span></a>
               <ul class="dropdown-menu">
@@ -64,11 +64,15 @@
                 <li><a href="{% url 'updatabase' %}" onclick="pleasewait(this);">更新数据</a></li>
                 <li role="separator" class="divider"></li>
                 <li><a href="{% url 'insertsearch' %}" >定向爬取</a></li>
+                <li><a href="{% url 'login12306' %}" onclick="pleasewait(this);">登录12306</a></li>
               </ul>
-           </li>
+           </li>                      
+           <li><a href="#">欢迎您:{{username}}</a></li>
+           <li><a href="{% url 'unlogin' %}">注销</a></li>
+           {% else %}
            <li><a href="{% url 'login' %}">登录</a></li>
            <li><a href="{% url 'regist' %}">注册</a></li>
-           <li><a href="{% url 'control' %}">control</a></li>
+           {% endif %}
           </ul>
         </div><!--/.nav-collapse -->
       </div>

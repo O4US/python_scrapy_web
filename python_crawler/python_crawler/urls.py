@@ -36,5 +36,10 @@ urlpatterns = [
     url(r'^deleteall$', control.deletelall,name='deleteall'),
     url(r'^insertdata$', control.insertdata,name='insertdata'),
     url(r'^updatabase$', control.updatabase,name='updatabase'),
-    url(r'^phone_search$', control.search_phone,name='phone_search'),
+    url(r'^phone_search$', control.search_phone,name='phone_search'),#京东获取手机
+    url(r'^loginpost$', control.login,name='loginpost'),#登录
+    url(r'^registpost$', control.regist,name='registpost'),#注册
+    url(r'^unlogin$', control.unlogin,name='unlogin'),#注销
+    url(r'^login12306$', control.login12306,name='login12306'),#登录12306
+    url(r'^baike_search$', control.baike_search,name='baike_search'),#百科深度获取
 ]
