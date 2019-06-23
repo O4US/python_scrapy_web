@@ -2,6 +2,7 @@ import requests
 import re 
 import time
 from crawler.models import Baike
+from urllib.request import quote, unquote
 
 exist_url=[]
 g_writecount=0
@@ -20,9 +21,10 @@ def scrapy(url,maxdepth,depth):
         exist_url.append(url)
         return None
     exist_url.append(url)
-    link_list=re.findall('<a href="/item/([^:#=<>]*?)".*?</a>',html)
+    link_list=re.findall('<a target.*? href="/item/([^:#=<>?]*?)".*?</a>',html)
     unique_list=list(set(link_list)-set(exist_url))
     for eachone in unique_list:
+        eachone=unquote(eachone)
         g_writecount+=1
         #output="No."+str(g_writecount)+"\t Depth:"+str(depth)+"\t"+url+'->'+eachone+'\n'
         #print(output)
