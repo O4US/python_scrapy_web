@@ -8,10 +8,10 @@ from lxml import etree
 from crawler.models import Phones
 
 def get_phones(str):
-    # conn=MySQLdb.connect(host="localhost",user="sa",passwd="1234",db="python_crawler",charset="utf8")
-    # cur=conn.cursor()
+    #conn=MySQLdb.connect(host="localhost",user="sa",passwd="1234",db="python_crawler",charset="utf8")
+    #cur=conn.cursor()
     #如果没有配置chromedriver.exe的环境变量，要写完整路径
-    chromedriver = "python_crawler\chromedriver.exe"
+    chromedriver = "D:\developitems\django\python_crawler\python_crawler\chromedriver.exe"
     browser = webdriver.Chrome(chromedriver)
     url = "https://www.jd.com/"
     browser.get(url)
@@ -53,7 +53,7 @@ def get_phones(str):
             now=time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time()))
             record=Phones(name=Name,url=Href,price=Price,time=now)
             record.save()
-            # cur.execute("insert into crawler_phones(name,url,price,time) values(%s,%s,%s,%s)",(Name,Href,Price,now))
+            #cur.execute("insert into crawler_phones(name,url,price,time) values(%s,%s,%s,%s)",(Name,Href,Price,now))
         time.sleep(5)
         #//*[@id="J_bottomPage"]/span[1]/a[9]   
         btnnext = browser.find_element_by_class_name("pn-next")
@@ -61,8 +61,8 @@ def get_phones(str):
         btnnext.click()
     browser.quit()
     print("手机爬取成功！")
-    # cur.close()
-    # conn.commit()
-    # conn.close()
-
+#    cur.close()
+#    conn.commit()
+#    conn.close()
+#get_phones('小米9')
 

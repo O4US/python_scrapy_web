@@ -1,0 +1,7 @@
+# Django==2.1.7
+django_imagekit==4.0.2
+djangorestframework==3.11.0
+DjangoUeditor==1.8.143
+simpleui==3.9
+django-cors-headers==3.2.1
+# pip install django -i http://mirrors.cloud.tencent.com/pypi/simple --trusted-host mirrors.cloud.tencent.com

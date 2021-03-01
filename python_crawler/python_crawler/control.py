@@ -17,16 +17,16 @@ def deletelall(request):
         context['zhuangtai']='删除失败！'    
     return render(request, 'zhuangtai.html', context)
 
-def insertdata(request):
+def insertdata(request):                                                             
     context = {}
     username=request.session.get('username')
     context['username']=username
     try:
         getmovies.get_movies()
+        time.sleep(2)       
+        getweathers.get_weather()
         time.sleep(2)
         getphones.get_phones('小米9')
-        time.sleep(2)
-        getweathers.get_weather()
         time.sleep(2)
         context['zhuangtai']='获取成功！'
     except:

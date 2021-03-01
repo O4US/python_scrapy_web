@@ -80,7 +80,7 @@ DATABASES = {
         'NAME': 'python_crawler', #数据库名
         'USER': 'sa', #用户名
         'PASSWORD': '1234', #密码
-        'HOST':'localhost', #地址
+        'HOST':'118.25.129.61', #地址 118.25.129.61
         'PORT':'3306', #端口
     }
 }
@@ -108,9 +108,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'zh-hans'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Shanghai'
 
 USE_I18N = True
 
